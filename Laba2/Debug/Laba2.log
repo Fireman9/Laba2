@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  real.cpp
+C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\real.cpp(11,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\real.cpp(4,6): warning C4101: 'point': unreferenced local variable
   Laba2.vcxproj -> C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\Debug\Laba2.exe
