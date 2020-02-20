@@ -6,6 +6,7 @@ int main() {
 	string filepath;
 	vector<string> team;
 	vector<int> points;
+	getline(cin, filepath);
 	read_file(filepath, team, points, teamsCount);
 	return 0;
 }
