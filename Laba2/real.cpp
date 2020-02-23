@@ -17,8 +17,13 @@ void read_file(string path, vector<string>& team, vector<int>& points, int& team
 						index = i;
 					}
 					else {
-						goals1.assign(line, index + 1, 1);
-						goals2.assign(line, index + 3, 1);
+						for (int f = index; f < i; f++) {
+							if (line[f] == ':') {
+								goals1.assign(line, index + 1, f-index-1);
+								goals2.assign(line, f+1, i - f - 1);
+								break;
+							}
+						}
 						t1 = stoi(goals1);
 						t2 = stoi(goals2);
 						if (t1 > t2)point += 3;
