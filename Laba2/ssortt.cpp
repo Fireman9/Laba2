@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<fstream>
 
 using namespace std;
 
@@ -34,4 +35,16 @@ int maxEl(vector<int> points, int a, int b) {
 		}
 	}
 	return indexMax;
+}
+
+void outputResult(vector<string> team, vector<int> points, string result) {
+	ofstream out(result);
+	out.open(result);
+	out << " CHAMPION IS " << team[0] << endl;
+	out << " Results of other teams : " << endl;
+	for (int i = 0; i < team.size() ; i++)
+	{
+		out << team[i] << " : " << points[i] << endl;
+	}
+	out.close();
 }
