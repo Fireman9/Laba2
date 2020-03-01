@@ -1,7 +1,7 @@
 #include "real.h"
 
-void read_file(string path, vector<string>& team, vector<int>& points, int& teamsCount) {
-	int point = 0, t1, t2, index = 0;
+void read_file(string path, vector<string>& team, vector<int>& points) {
+	int point = 0, t1, t2, index = 0, teamsCount;
 	string line, teamName, goals1, goals2;
 	ifstream in(path);
 	if (in.is_open()) {

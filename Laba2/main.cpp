@@ -1,12 +1,18 @@
-#include <iostream>
+#include <boost/filesystem.hpp> 
 #include "real.h"
 
+using namespace boost::filesystem;
+
 int main() {
-	int teamsCount;
 	string filepath;
 	vector<string> team;
 	vector<int> points;
 	getline(cin, filepath);
-	read_file(filepath, team, points, teamsCount);
+	path direct = filepath;
+	for (directory_iterator it(direct), end; it != end; ++it) {
+		if (it->path().extension() == ".csv") {
+			read_file(it->path().string(), team, points);
+		}
+	}
 	return 0;
 }
