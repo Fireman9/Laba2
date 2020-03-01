@@ -1,5 +1,6 @@
 #include <boost/filesystem.hpp> 
 #include "real.h"
+#include "ssortt.h"
 
 using namespace boost::filesystem;
 
@@ -14,5 +15,6 @@ int main() {
 			read_file(it->path().string(), team, points);
 		}
 	}
+	ssort(team, points);
 	return 0;
 }
