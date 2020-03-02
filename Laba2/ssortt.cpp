@@ -9,7 +9,6 @@ int findMaxIndex(vector<int>& points, int a, int b);
 
 void ssort(vector<string>& team, vector<int>& points) {
 	int maxIndex;
-	string commands1, commands2;
 	for (int i = 0;  i < points.size();  i++) {
 		maxIndex = findMaxIndex(points, i, points.size());
 		swap(points[i], points[maxIndex]);
