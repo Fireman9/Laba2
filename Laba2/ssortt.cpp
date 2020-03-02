@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int maxEl(vector<int> points, int a, int b);
+int maxEl(vector<int>& points, int a, int b);
 
 void ssort(vector<string> team, vector<int> points) {
 	int a = points.size();
@@ -23,7 +23,7 @@ void ssort(vector<string> team, vector<int> points) {
 	}
 }
 
-int maxEl(vector<int> points, int a, int b) {
+int maxEl(vector<int>& points, int a, int b) {
 	int max = points[a];
 	int indexMax = a;
 	for (int i = a; i < b; i++)
@@ -37,7 +37,7 @@ int maxEl(vector<int> points, int a, int b) {
 	return indexMax;
 }
 
-void outputResult(vector<string> team, vector<int> points, string result) {
+void outputResult(vector<string>& team, vector<int>& points, string result) {
 	ofstream out(result);
 	out.open(result);
 	out << " CHAMPION IS " << team[0] << endl;
