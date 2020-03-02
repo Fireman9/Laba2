@@ -5,46 +5,39 @@
 
 using namespace std;
 
-int maxEl(vector<int>& points, int a, int b);
+int findMaxIndex(vector<int>& points, int a, int b);
 
-void ssort(vector<string> team, vector<int> points) {
-	int a = points.size();
-	int b, c, d;
+void ssort(vector<string>& team, vector<int>& points) {
+	int maxIndex;
 	string commands1, commands2;
-	for (int i = 0;  i < a;  i++)
-	{
-		b = points[i];
-		c = maxEl(points, i, a);
-		d = points[c];
-		swap(b, d);
-		commands1 = team[i];
-		commands2 = team[c];
-		swap(commands1, commands2);
+	for (int i = 0;  i < points.size();  i++) {
+		maxIndex = findMaxIndex(points, i, points.size());
+		swap(points[i], points[maxIndex]);
+		swap(team[i], team[maxIndex]);
 	}
 }
 
-int maxEl(vector<int>& points, int a, int b) {
-	int max = points[a];
-	int indexMax = a;
-	for (int i = a; i < b; i++)
-	{
-		if (max<points[i])
-		{
-			max = points[i];
+int findMaxIndex(vector<int>& points, int curIndex, int size) {
+	int maxEl = points[curIndex];
+	int indexMax = curIndex;
+	for (int i = curIndex; i < size; i++) {
+		if (maxEl < points[i]) {
+			maxEl = points[i];
 			indexMax = i;
 		}
 	}
 	return indexMax;
 }
 
-void outputResult(vector<string>& team, vector<int>& points, string result) {
-	ofstream out(result);
-	out.open(result);
-	out << " CHAMPION IS " << team[0] << endl;
-	out << " Results of other teams : " << endl;
-	for (int i = 0; i < team.size() ; i++)
-	{
-		out << team[i] << " : " << points[i] << endl;
+void outputResult(vector<string>& team, vector<int>& points) {
+	ofstream out("result.csv");
+	if (out.is_open()) {
+		for (int i = 0; i < team.size(); i++) {
+			out << team[i] << "," << points[i] << endl;
+		}
+		out.close();
 	}
-	out.close();
+	else {
+		cout << "File wasn't created" << endl;
+	}
 }

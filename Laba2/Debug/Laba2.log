@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  ssortt.cpp
+C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\ssortt.cpp(13,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\ssortt.cpp(35,21): warning C4018: '<': signed/unsigned mismatch
   Laba2.vcxproj -> C:\Users\Nazariy\Documents\GitHub\Laba2\Laba2\Debug\Laba2.exe

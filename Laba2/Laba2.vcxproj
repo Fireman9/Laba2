@@ -156,9 +156,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="real.cpp" />
+    <ClCompile Include="ssortt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="real.h" />
+    <ClInclude Include="ssortt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

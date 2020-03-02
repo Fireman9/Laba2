@@ -21,9 +21,15 @@
     <ClCompile Include="real.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ssortt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssortt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
