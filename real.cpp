@@ -1,7 +1,8 @@
 #include "real.h"
 
 void read_file(string path, vector<string>& team, vector<int>& points) {
-	int point = 0, t1, t2, index = 0, teamsCount;
+	int point = 0, index = 0, teamsCount;
+	double t1, t2;
 	string line, teamName, goals1, goals2;
 	ifstream in(path);
 	if (in.is_open()) {
@@ -24,8 +25,8 @@ void read_file(string path, vector<string>& team, vector<int>& points) {
 								break;
 							}
 						}
-						t1 = stoi(goals1);
-						t2 = stoi(goals2);
+						t1 = stod(goals1);
+						t2 = stod(goals2);
 						if (t1 > t2)point += 3;
 						else if (t1 == t2)point++;
 						index = i;
