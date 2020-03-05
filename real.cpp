@@ -20,8 +20,8 @@ void read_file(string path, vector<string>& team, vector<int>& points) {
 					else {
 						for (int f = index; f < i; f++) {
 							if (line[f] == ':') {
-								goals1.assign(line, index + 1, f-index-1);
-								goals2.assign(line, f+1, i - f - 1);
+								goals1.assign(line, index + 1, f - index - 1);
+								goals2.assign(line, f + 1, i - f - 1);
 								break;
 							}
 						}
