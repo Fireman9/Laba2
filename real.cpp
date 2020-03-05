@@ -12,20 +12,6 @@ void read_file(string path, vector<string>& team, vector<int>& points) {
 		while (getline(in, line)) {
 			line += ',';
 			for (int i = 0; i < line.length(); i++) {
-<<<<<<< HEAD
-				if (line[i] == ',') {
-					if (index == 0) {
-						teamName.assign(line, index, i - index);
-						team.push_back(teamName);
-						index = i;
-					}
-					else {
-						for (int f = index; f < i; f++) {
-							if (line[f] == ':') {
-								goals1.assign(line, index + 1, f - index - 1);
-								goals2.assign(line, f + 1, i - f - 1);
-								break;
-=======
 				if (line[i] == '"') {
 					lapki++; 
 				}
@@ -50,7 +36,6 @@ void read_file(string path, vector<string>& team, vector<int>& points) {
 									goals2.assign(line, f + 1, i - f - 1);
 									break;
 								}
->>>>>>> origin/master
 							}
 							t1 = stod(goals1);
 							t2 = stod(goals2);
